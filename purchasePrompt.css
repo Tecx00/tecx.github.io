@@ -1,0 +1,32 @@
+.prompt {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.prompt-content {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.prompt.active {
+  display: block;
+}
+
+.prompt.active .prompt-content {
+  opacity: 1; /* When the prompt is active, set opacity to 1 */
+}

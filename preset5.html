@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cinematic LUTs</title>
+  <link rel="stylesheet" href="stylesProduct.css">
+  <link rel="stylesheet" href="navBarStyles.css">
+  <link rel="stylesheet" href="purchasePrompt.css">
+  <link rel="stylesheet" href="stylePurchase.css">
+  <link rel="icon" href="../images%20and%20vids/favicon.jpg" type="image/x-icon"/>
+  <script src="scripts.js"></script>
+</head>
+<body>
+<div class="topbar">
+  <a href="#" onclick="openNav()">&#9776;</a>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="mainPg.html">Home</a>
+  <a href="Portfolio.html">Portfolio</a>
+  <a href="productsList.html">Preset Shop</a>
+  <a href="faq.html">FAQ</a>
+  <a href="mainPg.html#contacts">Contact</a>
+</div>
+
+<div class="container">
+  <div class="product-visual">
+    <h1>Cinematic LUTs</h1>
+    <img src="https://fakeimg.pl/300x300">
+    <h2>₱299.00</h2>
+  </div>
+
+  <div class="product-description">
+    <h2>Description</h2>
+    <h3>A LUT for your filmmaking dreams, this includes 6 types of cinematic LUTs:
+      <ul>
+        <li>HDR</li>
+        <li>Vibrance</li>
+        <li>Color Correction</li>
+        <li>Vintage</li>
+        <li>Modern</li>
+        <li>Special LUTs for day and Night</li>
+      </ul>
+    </h3>
+    <a href="#" onclick="openPrompt()" class="cta-button">Purchase</a>
+    <a href="productsList.html" class="back-button cta-button">Go Back</a>
+    <!-- Hidden prompt div -->
+    <div id="prompt" class="prompt">
+      <div class="prompt-content">
+        <span class="close" onclick="closePrompt()">&times;</span>
+        <!-- Include your purchase form here -->
+        <form id="purchaseForm" action="/submit_order" method="post">
+          <h2 style="text-align: center">Purchase</h2>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
+          <label for="amount">Amount:</label><br>
+          <input type="number" id="amount" name="amount" min="1" max="1000" required><br>
+          <label>Payment Method:</label><br><br>
+          <label for="gCash">GCash Number:</label><br>
+          <input type="tel" id="gCash" name="phone" placeholder="1234 456 7890" pattern="[0-9]{4} [0-9]{3} [0-9]{4}" required><br><br>
+
+          <div class="buttons">
+            <input id="submitButton" type="submit" value="Proceed">
+            <input type="reset" value="Cancel" onclick="closePrompt()">
+          </div>
+        </form>
+
+        <div id="confirmationMessage" style="display: none;">
+          <p>Your submission has been received. Thank you!</p>
+        </div>
+
+      </div>
+    </div>
+    <script src="validationScript.js"></script>
+  </div>
+</div>
+</body>
+</html>

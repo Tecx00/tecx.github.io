@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frequently Asked Questions</title>
+  <link rel="stylesheet" href="stylesFaq.css">
+  <link rel="stylesheet" href="navBarStyles.css">
+  <link rel="icon" href="../images%20and%20vids/favicon.jpg" type="image/x-icon"/>,
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <div class="topbar">
+   <a href="#" onclick="openNav()">&#9776;</a>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="mainPg.html">Home</a>
+    <a href="Portfolio.html">Portfolio</a>
+    <a href="productsList.html">Preset Shop</a>
+    <a href="faq.html">FAQ</a>
+    <a href="mainPg.html#contacts">Contact</a>
+  </div>
+
+  <div class="container">
+    <h1 style="text-align: center; font-size: 3em;">Frequently Asked Questions</h1>
+    <div class="questions">
+     <button class="accordion">How much do you charge for your services?</button>
+     <div class="panel">
+      <p>For photography, it starts around ₱1500.00, unless a client has other requests.
+        For videography, it starts around ₱3000.00, unless there are other requests too.
+        Editing is already included in the photography and videography.
+        For other editing services, it starts around ₱2000.00. This depends solely on the project and the amount of time the editor spends.
+      </p>
+     </div>
+     <button class="accordion">When are you usually available?</button>
+     <div class="panel">
+      <p>I am available during Sundays up until Wednesdays. It may change as I am a student.</p>
+     </div>
+
+     <button class="accordion">Will there be more items to come in the shop?</button>
+     <div class="panel">
+      <p>Yes, the shop will continuously have more items to sell on the long run.</p>
+     </div>
+
+      <button class="accordion">I want to join your crew, is it possible?</button>
+      <div class="panel">
+        <p>Yes, you may contact me by the information provided in the site.</p>
+      </div>
+    </div>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

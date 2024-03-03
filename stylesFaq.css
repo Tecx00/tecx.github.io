@@ -1,0 +1,57 @@
+@import url('https://fonts.cdnfonts.com/css/norwester');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gold;
+  font-family: Norwester, sans-serif;
+}
+
+.container {
+  margin-top: 10vh;
+  align-items: center;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  margin: 10vh;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  font-family: Norwester, sans-serif;
+  font-size: 2em;
+  background-color: #111111;
+  color: #ececec;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #3d3d3d;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  font-size: 1.5em;
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Style the accordion panel when it is expanded */
+.active + .panel {
+  max-height: 1000px;
+  transition: max-height 0.2s ease-in;
+}
+
+

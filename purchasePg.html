@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylePurchase.css">
+  <link rel="icon" href="../images%20and%20vids/favicon.jpg" type="image/x-icon"/>,
+  <title>purchase</title>
+</head>
+<body>
+  <div class="container">
+    <form action="/submit_order" method="post">
+      <h2 style="text-align: center">Purchase</h2>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <label for="amount">Amount:</label><br>
+      <input type="number" id="amount" name="amount" min="1" max="100" required><br>
+      <label for="payment-method">Payment Method:</label><br>
+      <label for="payment-method-1">
+        <input type="radio" id="payment-method-1" name="payment" value="method1" required>
+        GCash
+      </label><br>
+      <label for="payment-method-2">
+        <input type="radio" id="payment-method-2" name="payment" value="method2" required>
+        Credit Card
+      </label><br>
+      <label for="payment-method-3">
+        <input type="radio" id="payment-method-3" name="payment" value="method3" required>
+        Paypal
+      </label><br>
+      <div class="buttons">
+        <input type="submit" value="Proceed">
+        <input type="reset" value="Cancel">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
